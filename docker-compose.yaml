@@ -1,0 +1,15 @@
+
+version: '3'
+
+
+services:
+
+  postgres-db:
+    image: mongo:7
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      POSTGRES_DB: nest-pokemon
+    volumes:
+      - ./mongo:/data/db
